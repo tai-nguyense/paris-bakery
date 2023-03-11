@@ -7,48 +7,65 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link
-        href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Inconsolata:wght@300;500;700&family=Roboto:ital,wght@0,300;0,500;0,900;1,300;1,500;1,900&family=Yeseva+One&display=swap"
+    <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Roboto+Slab:wght@700&family=Roboto:ital,wght@0,300;0,500;0,900;1,300;1,500;1,900&family=Bebas+Neue&family=Inconsolata:wght@300;500;700&family=Roboto:ital,wght@0,300;0,500;0,900;1,300;1,500;1,900&family=Yeseva+One&display=swap"
         rel="stylesheet">
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet"
-        integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
     <link rel="stylesheet" href="index.css">
-    <title>Paris Bakery</title>
+    <link rel="icon" type="png" href="resources/logo (2).png">
+    <title> Paris Bakery
+    </title>
 </head>
 
 <body>
+    <nav class="navbar navbar-expand-sm fixed-top bg-transparent">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="index.html">
+                PARIS BAKERY
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navLinks">
+                <div class="navbar-icon navbar-closed">
+                    <div class="top-bar"></div>
+                    <div class="mid-bar"></div>
+                    <div class="bot-bar"></div>
+                </div>
+            </button>
+            <div class="collapse navbar-collapse" id="navLinks">
+                <ul class="navbar-nav">
+                    <li class="nav-item">
+                        <a class="nav-link active" href="#">CAKES</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">GALLERY</a>
+                    </li>
+                    <li class="spacer"></li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">MENU</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">CONTACT</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
     <div class="container-fluid">
-        <nav class="navbar navbar-expand-sm fixed-top bg-body-tertiary">
-            <div class="container-fluid">
-                <a class="navbar-brand" href="index.html">PARIS BAKERY</a>
-                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navLinks">
-                    <div class="navbar-icon navbar-closed">
-                        <div class="top-bar"></div>
-                        <div class="mid-bar"></div>
-                        <div class="bot-bar"></div>
+        <div class="row section-size">
+            <div class="col landing-wrapper">
+                <video loop autoplay>
+                    <source src="resources/spreading-cream.mp4" type="video/mp4">
+                </video>
+                <div class="row heading">
+                    <div class="col-12 header">
+                        Spreading Joy
                     </div>
-                </button>
-                <div class="collapse navbar-collapse" id="navLinks">
-                    <ul class="navbar-nav">
-                        <li class="nav-item">
-                            <a class="nav-link" href="#">CAKES</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="#">GALLERY</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="#">MENU</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="#">CONTACT</a>
-                        </li>
-                    </ul>
+                    <div class="col-12 subheader">
+                        one treat at a time.
+                    </div>
                 </div>
             </div>
-        </nav>
-        <div class="row content-offset"></div>
-        <div class="row section-height">
-            <div class="col col-width carousel slide carousel-fade" id="carousel-main" data-bs-ride="true">
+        </div>
+        <!-- <div class="row section-size">
+            <div class="col-12 col-width carousel slide carousel-fade" id="carousel-main" data-bs-ride="true">
                 <div class="carousel-indicators">
                     <button type="button" data-bs-target="#carousel-main" data-bs-slide-to="0" class="active"></button>
                     <button type="button" data-bs-target="#carousel-main" data-bs-slide-to="1"></button>
@@ -56,189 +73,207 @@
                 </div>
                 <div class="carousel-inner">
                     <div class="carousel-item active">
-                        <img src="resources/Paris Bakery/wedding-2.jpg" alt="Wedding Cake with Fresh Pink Flowers">
+                        <img src="resources/purple-cupcakes.jpg" alt="Wedding Cake with Fresh Pink Flowers">
                     </div>
                     <div class="carousel-item">
-                        <img src="resources/Paris Bakery/universal-round-3.jpg"
-                            alt="Round Cake with Sunflower Shaped Buttercream">
+                        <img src="resources/bread-n-flower.jpg" alt="Round Cake with Sunflower Shaped Buttercream">
                     </div>
                     <div class="carousel-item">
-                        <img src="resources/Paris Bakery/birthday-sheet-1.jpg" alt="Sheet Cake Cut into Number 7">
+                        <img src="resources/cookie.jpg" alt="Sheet Cake Cut into Number 7">
                     </div>
                 </div>
-                <button class="carousel-control-prev" type="button" data-bs-target="#carousel-main"
-                    data-bs-slide="prev">
+                <button class="carousel-control-prev" type="button" data-bs-target="#carousel-main" data-bs-slide="prev">
                     <span class="carousel-control-prev-icon"></span>
                     <span class="visually-hidden">Previous</span>
                 </button>
-                <button class="carousel-control-next" type="button" data-bs-target="#carousel-main"
-                    data-bs-slide="next">
+                <button class="carousel-control-next" type="button" data-bs-target="#carousel-main" data-bs-slide="next">
                     <span class="carousel-control-next-icon"></span>
                     <span class="visually-hidden">Next</span>
                 </button>
-            </div>
-        </div>
-        <div class="row section-height">
-            <div class="col">
-                <div class="row about-wrapper">
-                    <div class="col-12 section-about col-width">
-                        <div class="about-info">Family owned and operated since 1982</div>
+                <div class="col-12 heading">
+                    <div class="header">
+                        Spreading Joy
+                    </div>
+                    <div class="subheader">
+                        one treat at a time.
                     </div>
                 </div>
             </div>
+        </div> -->
+        <div class="row section-size">
+            <div class="col about-wrapper">
+                <div class="section-about">
+                    <div class="about-info">Family owned and operated since 1982</div>
+                </div>
+            </div>
         </div>
-        <div class="row section-height">
-            <div class="col">
-                <div class="row section-content">
-                    <div class="col-12 section-name col-width">
-                        <a href="#">
-                            <h2>CAKES</h2>
-                        </a>
-                    </div>
-                    <div class="col-10 col-width carousel slide carousel-fade carousel-category" id="carousel-1"
-                        data-bs-ride="true">
+        <div class="row section-size">
+            <div class="col-12 section-name col-width">
+                <a href="#">
+                    <h2>CAKES</h2>
+                </a>
+            </div>
+            <div class="col-12">
+                <div class="row carousel-wrapper">
+                    <div class="col-10 col-md-6 order-1 order-md-2 carousel slide carousel-fade carousel-category" id="carousel-1" data-bs-ride="true">
                         <div class="carousel-indicators">
-                            <button type="button" data-bs-target="#carousel-1" data-bs-slide-to="0"
-                                class="active"></button>
+                            <button type="button" data-bs-target="#carousel-1" data-bs-slide-to="0" class="active"></button>
                             <button type="button" data-bs-target="#carousel-1" data-bs-slide-to="1"></button>
                             <button type="button" data-bs-target="#carousel-1" data-bs-slide-to="2"></button>
                         </div>
                         <div class="carousel-inner">
                             <div class="carousel-item active">
-                                <img src="resources/Paris Bakery/custom-round-2.jpg"
-                                    alt="Cake shaped like a Wheel of Cheese">
+                                <img src="resources/Paris Bakery/custom-round-2.jpg" alt="Cake shaped like a Wheel of Cheese">
                             </div>
                             <div class="carousel-item">
-                                <img src="resources/Paris Bakery/custom-round-1.jpg"
-                                    alt="Cake shaped like a Bunny in a Hat">
+                                <img src="resources/Paris Bakery/custom-round-1.jpg" alt="Cake shaped like a Bunny in a Hat">
                             </div>
                             <div class="carousel-item">
-                                <img src="resources/Paris Bakery/custom-sheet-1.jpg"
-                                    alt="Cake shaped like an Elephant and Cupcakes">
+                                <img src="resources/Paris Bakery/custom-sheet-1.jpg" alt="Cake shaped like an Elephant and Cupcakes">
                             </div>
                         </div>
-                        <button class="carousel-control-prev" type="button" data-bs-target="#carousel-1"
-                            data-bs-slide="prev">
+                        <button class="carousel-control-prev" type="button" data-bs-target="#carousel-1" data-bs-slide="prev">
                             <span class="carousel-control-prev-icon"></span>
                             <span class="visually-hidden">Previous</span>
                         </button>
-                        <button class="carousel-control-next" type="button" data-bs-target="#carousel-1"
-                            data-bs-slide="next">
+                        <button class="carousel-control-next" type="button" data-bs-target="#carousel-1" data-bs-slide="next">
                             <span class="carousel-control-next-icon"></span>
                             <span class="visually-hidden">Next</span>
                         </button>
                     </div>
-                </div>
-            </div>
-        </div>
-        <div class="row section-height">
-            <div class="col">
-                <div class="row section-content">
-                    <div class="col-12 section-name col-width">
-                        <a href="#">
-                            <h2>PASTRIES</h2>
-                        </a>
-                    </div>
-                    <div class="col-10 col-width carousel slide carousel-fade carousel-category" id="carousel-2"
-                        data-bs-ride="true">
-                        <div class="carousel-indicators">
-                            <button type="button" data-bs-target="#carousel-2" data-bs-slide-to="0"
-                                class="active"></button>
-                            <button type="button" data-bs-target="#carousel-2" data-bs-slide-to="1"></button>
-                            <button type="button" data-bs-target="#carousel-2" data-bs-slide-to="2"></button>
-                        </div>
-                        <div class="carousel-inner">
-                            <div class="carousel-item active">
-                                <img src="resources/Paris Bakery/pastry-petit-3.jpg" alt="Petit Fours">
+                    <div class="d-md-block col-md-5 order-2 order-md-1 desc">
+                        <div class="row">
+                            <div class="col-12">
+                                <h3>
+                                    CHEESE WHEEL CAKE
+                                </h3>
                             </div>
-                            <div class="carousel-item">
-                                <img src="resources/Paris Bakery/pastry-cupcake-4.jpg" alt="Cupcakes">
-                            </div>
-                            <div class="carousel-item">
-                                <img src="resources/Paris Bakery/pastry-assorted.jpg" alt="Assorted Pastries">
+                            <div class="col-12">
+                                <p>
+                                    8" Round Cake covered in red fondant shaped like a wheel of cheese.
+                                </p>
                             </div>
                         </div>
-                        <button class="carousel-control-prev" type="button" data-bs-target="#carousel-2"
-                            data-bs-slide="prev">
-                            <span class="carousel-control-prev-icon"></span>
-                            <span class="visually-hidden">Previous</span>
-                        </button>
-                        <button class="carousel-control-next" type="button" data-bs-target="#carousel-2"
-                            data-bs-slide="next">
-                            <span class="carousel-control-next-icon"></span>
-                            <span class="visually-hidden">Next</span>
-                        </button>
                     </div>
                 </div>
             </div>
         </div>
-        <div class="row section-height">
-            <div class="col">
-                <div class="row section-content">
-                    <div class="col-12 section-name col-width">
-                        <a href="#">
-                            <h2>OTHERS</h2>
-                        </a>
+    </div>
+    <div class="row section-size">
+        <div class="col-12 section-name col-width">
+            <a href="#">
+                <h2>PASTRIES</h2>
+            </a>
+        </div>
+        <div class="col-12">
+            <div class="row carousel-wrapper">
+                <div class="col-12 col-md-6 order-2 order-md-1 carousel slide carousel-fade carousel-category" id="carousel-2" data-bs-ride="true">
+                    <div class="carousel-indicators">
+                        <button type="button" data-bs-target="#carousel-2" data-bs-slide-to="0" class="active"></button>
+                        <button type="button" data-bs-target="#carousel-2" data-bs-slide-to="1"></button>
+                        <button type="button" data-bs-target="#carousel-2" data-bs-slide-to="2"></button>
                     </div>
-                    <div class="col-10 col-width carousel slide carousel-fade carousel-fade carousel-category"
-                        id="carousel-3" data-bs-ride="true">
-                        <div class="carousel-indicators">
-                            <button type="button" data-bs-target="#carousel-3" data-bs-slide-to="0"
-                                class="active"></button>
-                            <button type="button" data-bs-target="#carousel-3" data-bs-slide-to="1"></button>
-                            <button type="button" data-bs-target="#carousel-3" data-bs-slide-to="2"></button>
+                    <div class="carousel-inner">
+                        <div class="carousel-item active">
+                            <img src="resources/Paris Bakery/pastry-petit-3.jpg" alt="Petit Fours">
                         </div>
-                        <div class="carousel-inner">
-                            <div class="carousel-item active">
-                                <img src="resources/Paris Bakery/others-cookies-1.jpg"
-                                    alt="Chocolate Dipped Cookies with Sprinkles">
-                            </div>
-                            <div class="carousel-item">
-                                <img src="resources/Paris Bakery/christmas-yule-4.jpg" alt="Yule Log">
-                            </div>
-                            <div class="carousel-item">
-                                <img src="resources/Paris Bakery/pastry-stollen.jpg" alt="Stollen">
-                            </div>
+                        <div class="carousel-item">
+                            <img src="resources/Paris Bakery/pastry-cupcake-4.jpg" alt="Cupcakes">
                         </div>
-                        <button class="carousel-control-prev" type="button" data-bs-target="#carousel-3"
-                            data-bs-slide="prev">
-                            <span class="carousel-control-prev-icon"></span>
-                            <span class="visually-hidden">Previous</span>
-                        </button>
-                        <button class="carousel-control-next" type="button" data-bs-target="#carousel-3"
-                            data-bs-slide="next">
-                            <span class="carousel-control-next-icon"></span>
-                            <span class="visually-hidden">Next</span>
-                        </button>
+                        <div class="carousel-item">
+                            <img src="resources/Paris Bakery/pastry-assorted.jpg" alt="Assorted Pastries">
+                        </div>
                     </div>
+                    <button class="carousel-control-prev" type="button" data-bs-target="#carousel-2" data-bs-slide="prev">
+                        <span class="carousel-control-prev-icon"></span>
+                        <span class="visually-hidden">Previous</span>
+                    </button>
+                    <button class="carousel-control-next" type="button" data-bs-target="#carousel-2" data-bs-slide="next">
+                        <span class="carousel-control-next-icon"></span>
+                        <span class="visually-hidden">Next</span>
+                    </button>
+                </div>
+                <div class="d-md-block col-md-5 order-2 order-md-1 desc">
+                    <h3>
+                        CHEESE WHEEL CAKE
+                    </h3>
+                    <p>
+                        8" Round Cake covered in red fondant shaped like a wheel of cheese.
+                    </p>
                 </div>
             </div>
         </div>
-        <div class="row section-height">
-            <div class="col">
-                <div class="row section-content">
-                    <div class="col-12 section-name col-width">
-                        <a href="#">
-                            <h2>EVENTS</h2>
-                        </a>
+    </div>
+    <div class="row section-size">
+        <div class="col-12 section-name col-width">
+            <a href="#">
+                <h2>OTHERS</h2>
+            </a>
+        </div>
+        <div class="col-12">
+            <div class="row carousel-wrapper">
+                <div class="col-12 col-md-6 order-1 order-md-2 carousel slide carousel-fade carousel-fade carousel-category" id="carousel-3" data-bs-ride="true">
+                    <div class="carousel-indicators">
+                        <button type="button" data-bs-target="#carousel-3" data-bs-slide-to="0" class="active"></button>
+                        <button type="button" data-bs-target="#carousel-3" data-bs-slide-to="1"></button>
+                        <button type="button" data-bs-target="#carousel-3" data-bs-slide-to="2"></button>
                     </div>
-                    <div class="col-12">
-                        <div class="row gallery">
-                            <div class="col-12 gallery-text-wrapper gallery-closed">
-                                <div class="gallery-text">See our gallery</div>
-                                <div class="gallery-arrow"></div>
-                            </div>
+                    <div class="carousel-inner">
+                        <div class="carousel-item active">
+                            <img src="resources/Paris Bakery/others-cookies-1.jpg" alt="Chocolate Dipped Cookies with Sprinkles">
+                        </div>
+                        <div class="carousel-item">
+                            <img src="resources/Paris Bakery/christmas-yule-4.jpg" alt="Yule Log">
+                        </div>
+                        <div class="carousel-item">
+                            <img src="resources/Paris Bakery/pastry-stollen.jpg" alt="Stollen">
                         </div>
                     </div>
-                    <div class="col-12">
-                        <a href="#" class="btn btn-purple" id="btnContact">
-                            CONTACT US
-                            <img id="mailIcon" src="resources/envelope-fill.svg" alt="Contact Us">
-                        </a>
-                    </div>
+                    <button class="carousel-control-prev" type="button" data-bs-target="#carousel-3" data-bs-slide="prev">
+                        <span class="carousel-control-prev-icon"></span>
+                        <span class="visually-hidden">Previous</span>
+                    </button>
+                    <button class="carousel-control-next" type="button" data-bs-target="#carousel-3" data-bs-slide="next">
+                        <span class="carousel-control-next-icon"></span>
+                        <span class="visually-hidden">Next</span>
+                    </button>
+                </div>
+                <div class="d-md-block col-md-5 order-2 order-md-1 desc">
+                    <h3>
+                        CHEESE WHEEL CAKE
+                    </h3>
+                    <p>
+                        8" Round Cake covered in red fondant shaped like a wheel of cheese.
+                    </p>
                 </div>
             </div>
         </div>
+    </div>
+    <div class="row section-size">
+        <div class="col">
+            <div class="row section-content">
+                <div class="col-12 section-name col-width">
+                    <a href="#">
+                        <h2>EVENTS</h2>
+                    </a>
+                </div>
+                <div class="col-12">
+                    <div class="row gallery">
+                        <div class="col-12 gallery-text-wrapper gallery-closed">
+                            <div class="gallery-text">See our gallery</div>
+                            <div class="gallery-arrow"></div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-12">
+                    <a href="#" class="btn btn-purple" id="btnContact">
+                        CONTACT US
+                        <img id="mailIcon" src="resources/envelope-fill.svg" alt="Contact Us">
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
     </div>
     <footer>
         <div class="container-fluid">
@@ -257,9 +292,7 @@
     </footer>
     </div>
     <script src="index.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"
-        integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN"
-        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js" integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN" crossorigin="anonymous"></script>
 </body>
 
 </html>

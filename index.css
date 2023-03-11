@@ -6,6 +6,7 @@ font-family: 'Yeseva One', cursive; */
 body {
     -ms-overflow-style: none;
     scrollbar-width: none;
+    overflow-x: hidden;
 }
 
 body::-webkit-scrollbar {
@@ -14,6 +15,10 @@ body::-webkit-scrollbar {
 
 :root {
     --bs-body-font-family: 'Roboto', sans-serif;
+}
+
+.container-fluid {
+    padding: 0;
 }
 
 a {
@@ -26,17 +31,47 @@ a {
     align-items: center;
 }
 
+.bg-transparent .navbar-brand {
+    color: white;
+}
+
+.bg-transparent .navbar-brand:hover {
+    filter: invert(30%) sepia(90%) saturate(4529%) hue-rotate(200deg) brightness(100%) contrast(104%);
+}
+
+.bg-transparent .top-bar,
+.bg-transparent .mid-bar,
+.bg-transparent .bot-bar {
+    background-color: rgb(255, 255, 255);
+}
+
+.bg-transparent .navbar-icon:hover {
+    filter: invert(30%) sepia(90%) saturate(4529%) hue-rotate(200deg) brightness(100%) contrast(104%);
+}
+
 .navbar {
-    --bs-navbar-brand-color: rgb(106, 78, 144);
-    --bs-navbar-brand-hover-color: rgb(54, 36, 192);
+    --bs-navbar-brand-color: #5b3590;
+    --bs-navbar-brand-hover-color: #5b3590;
+    --bs-navbar-active-color: rgb(200, 48, 101);
 }
 
 .navbar-brand {
     font-weight: bold;
+    padding-left: 3%;
+}
+
+.navbar-brand:hover {
+    filter: invert(90%) sepia(90%) saturate(4529%) hue-rotate(200deg) brightness(100%) contrast(104%);
 }
 
 .nav-link {
     font-weight: bold;
+    padding-left: 3%;
+}
+
+.nav-link:hover {
+    color: rgb(106, 78, 144);
+    filter: invert(90%) sepia(90%) saturate(4529%) hue-rotate(200deg) brightness(100%) contrast(104%);
 }
 
 .navbar-toggler {
@@ -47,7 +82,7 @@ a {
 }
 
 .navbar-icon:hover {
-    filter: invert(16%) sepia(90%) saturate(4759%) hue-rotate(240deg) brightness(100%) contrast(104%);
+    filter: invert(90%) sepia(90%) saturate(4529%) hue-rotate(200deg) brightness(100%) contrast(104%);
 }
 
 .navbar-toggler:focus {
@@ -59,7 +94,8 @@ a {
 .navbar-icon {
     width: 30px;
     height: 30px;
-    animation-duration: 2s;
+    animation-duration: .2s;
+    animation-timing-function: ease-in-out;
 }
 
 .top-bar,
@@ -74,7 +110,8 @@ a {
 .navbar-open>.top-bar {
     animation-fill-mode: forwards;
     animation-name: top-bar-rotate;
-    animation-duration: .5s;
+    animation-duration: .2s;
+    animation-timing-function: ease-in-out;
 }
 
 @keyframes top-bar-rotate {
@@ -91,7 +128,7 @@ a {
 .navbar-open>.mid-bar {
     animation-fill-mode: forwards;
     animation-name: mid-bar-fade-out;
-    animation-duration: .2s;
+    animation-duration: .1s;
 }
 
 @keyframes mid-bar-fade-out {
@@ -106,7 +143,8 @@ a {
 .navbar-open>.bot-bar {
     animation-fill-mode: forwards;
     animation-name: bot-bar-rotate;
-    animation-duration: .5s;
+    animation-duration: .2s;
+    animation-timing-function: ease-in-out;
 }
 
 @keyframes bot-bar-rotate {
@@ -123,7 +161,8 @@ a {
 .navbar-closed>.top-bar {
     animation-fill-mode: forwards;
     animation-name: top-bar-unrotate;
-    animation-duration: .5s;
+    animation-duration: .2s;
+    animation-timing-function: ease-in-out;
 }
 
 @keyframes top-bar-unrotate {
@@ -140,7 +179,7 @@ a {
 .navbar-closed>.mid-bar {
     animation-fill-mode: forwards;
     animation-name: mid-bar-fade-in;
-    animation-duration: .2s;
+    animation-duration: .1s;
 }
 
 @keyframes mid-bar-fade-in {
@@ -155,7 +194,8 @@ a {
 .navbar-closed>.bot-bar {
     animation-fill-mode: forwards;
     animation-name: bot-bar-unrotate;
-    animation-duration: .5s;
+    animation-duration: .2s;
+    animation-timing-function: ease-in-out;
 }
 
 @keyframes bot-bar-unrotate {
@@ -174,65 +214,95 @@ a {
     --bs-nav-link-hover-color: rgb(54, 36, 192);
 }
 
-.section-height {
-    height: 744px;
-    background-color: rgb(106, 78, 144);
+.landing-wrapper {
+    height: 100%;
+    overflow: hidden;
+}
+
+video {
+    object-fit: cover;
+}
+
+.heading {
+    position: absolute;
+    z-index: 1;
+    justify-self: flex-start;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    text-align: center;
+    font-weight: bold;
+    color: #ffffff;
+}
+
+.header {
+    font-size: 40px;
+}
+
+.subheader {
+    font-size: 20px;
+}
+
+.section-size {
+    min-height: 744px;
+    height: calc(110vh - 56px);
     display: flex;
     justify-content: center;
     align-items: center;
-}
-
-.section-height:nth-child(even),
-.section-height:nth-child(even) h2 {
-    background-color: white;
+    margin-bottom: 10%;
     color: rgb(106, 78, 144);
 }
 
-.section-height:nth-child(odd),
-.section-height:nth-child(odd) h2 {
-    background-color: rgb(106, 78, 144);
-    color: white;
-}
-
-.section-height:nth-child(4) {
-    background-color: white;
-    color: white;
+.section-size h2 {
+    color: rgba(106, 78, 144, 0.841);
 }
 
 .section-name {
-    height: 100px;
     display: flex;
     justify-content: center;
-    align-items: center;
 }
 
 h2 {
-    font-size: 50px;
-    font-style: italic;
-}
-
-.section-content {
-    padding: 50px 0px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+    font-size: 80px;
+    font-weight: 600;
+    padding-bottom: 5%;
 }
 
 .col-width {
     padding: 0;
 }
 
-.content-offset {
-    height: 56px;
+.desc {
+    padding: 5%;
 }
 
-#carousel-main {
-    height: 744px;
+h3 {
+    color: #4866b1;
+    font-size: 30px;
+    font-family: 'Roboto Slab', serif;
+    font-weight: 900;
+    text-align: center;
+    margin: 0 auto;
+    margin-bottom: 5%;
+}
+
+p {
+    font-size: 15px;
+    font-family: 'Inconsolata', monospace;
+    color: rgb(77, 77, 77);
+    width: 80%;
+    text-align: center;
+    margin: 0 auto;
+}
+
+.carousel-wrapper {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 627px;
 }
 
 .carousel-category {
-    height: 500px;
-    margin-bottom: 44px;
+    height: 70%;
+    align-self: baseline;
 }
 
 .carousel-inner,
@@ -255,22 +325,18 @@ h2 {
 }
 
 .about-wrapper {
-    height: 500px;
-    width: 330px;
-}
-
-.section-about {
+    height: 80%;
+    margin: 0px 10%;
     background-image: url("resources/flowers_cornersVertical.jpg");
     background-size: cover;
     background-repeat: no-repeat;
     background-position-x: center;
-    border-top-right-radius: 20px;
-    border-bottom-left-radius: 20px;
+    border-radius: 20px;
 }
 
 .about-info {
     transform: translateX(50px) translateY(-10px);
-    height: 500px;
+    width: 280px;
     color: #88AB75;
     -webkit-text-stroke: 1px #7b9a6b;
     padding: 50px;
@@ -278,13 +344,15 @@ h2 {
     justify-content: center;
     align-items: center;
     text-align: center;
-    font-size: 25px;
+    font-size: 20px;
     font-weight: bolder;
     font-family: 'Yeseva One', cursive;
 }
 
 .gallery {
     height: 344px;
+    margin: auto;
+    max-width: 780px;
     display: flex;
     justify-content: baseline;
     align-items: center;
@@ -307,12 +375,14 @@ h2 {
     animation-fill-mode: forwards;
     animation-name: gallery-unhover;
     animation-duration: .5s;
+    animation-timing-function: ease-in-out;
 }
 
 .gallery-open {
     animation-fill-mode: forwards;
     animation-name: gallery-hover;
     animation-duration: .5s;
+    animation-timing-function: ease-in-out;
 }
 
 @keyframes gallery-hover {
@@ -342,10 +412,10 @@ h2 {
 }
 
 .gallery-arrow {
-    width: 25%;
-    height: 25%;
-    background-image: url("resources/play-fill.svg");
-    transform: translateY(40px) translateX(5px);
+    width: 70px;
+    height: 70px;
+    background-image: url("resources/forward-fill.svg");
+    transform: translateY(50%) translateX(30%);
     filter: invert(100%) sepia(0%) saturate(2%) hue-rotate(115deg) brightness(107%) contrast(101%);
     background-size: cover;
     background-repeat: no-repeat;
@@ -373,13 +443,15 @@ h2 {
     justify-content: center;
     animation-fill-mode: forwards;
     animation-name: btnContact-unhover;
-    animation-duration: .5s;
+    animation-duration: .2s;
+    animation-timing-function: ease-in-out;
 }
 
 #btnContact:hover {
     animation-fill-mode: forwards;
     animation-name: btnContact-hover;
-    animation-duration: .5s;
+    animation-duration: .2s;
+    animation-timing-function: ease-in-out;
 }
 
 @keyframes btnContact-hover {
@@ -441,7 +513,8 @@ footer {
     background-repeat: no-repeat;
     background-position-x: center;
     animation-name: instagram-unhover;
-    animation-duration: .5s;
+    animation-duration: .2s;
+    animation-timing-function: ease-in-out;
     border-radius: 10px;
 }
 
@@ -449,7 +522,8 @@ footer {
     cursor: pointer;
     animation-fill-mode: forwards;
     animation-name: instagram-hover;
-    animation-duration: .5s;
+    animation-duration: .2s;
+    animation-timing-function: ease-in-out;
 }
 
 @keyframes instagram-hover {
@@ -487,14 +561,16 @@ footer {
     background-position-x: center;
     animation-fill-mode: forwards;
     animation-name: facebook-unhover;
-    animation-duration: .5s;
+    animation-duration: .2s;
+    animation-timing-function: ease-in-out;
     border-radius: 50%;
 }
 
 .logo-facebook:hover {
     animation-fill-mode: forwards;
     animation-name: facebook-hover;
-    animation-duration: .5s;
+    animation-duration: .2s;
+    animation-timing-function: ease-in-out;
 }
 
 @keyframes facebook-hover {
@@ -516,5 +592,156 @@ footer {
     100% {
         transform: translateX(0px) translateY(0px);
         box-shadow: none;
+    }
+}
+
+@media (min-width: 576px) {
+    .navbar-brand {
+        position: absolute;
+        padding-left: 0;
+        left: 50%;
+        margin-left: -82px !important;
+    }
+    #navLinks {
+        display: flex;
+        justify-content: center;
+    }
+    .navbar-brand {
+        font-weight: bold;
+        font-size: 1.5rem;
+        padding-left: 0;
+    }
+    .navbar-nav {
+        min-width: 550px;
+        width: 80%;
+        max-width: 600px;
+        display: flex;
+    }
+    .nav-link {
+        padding-left: 0;
+    }
+    .nav-item {
+        width: 15%;
+    }
+    .nav-item>a {
+        text-align: center;
+    }
+    .bg-transparent .nav-item>a {
+        color: white;
+    }
+    .bg-transparent .nav-item:hover {
+        filter: invert(30%) sepia(90%) saturate(4529%) hue-rotate(200deg) brightness(100%) contrast(104%);
+    }
+    .spacer {
+        width: 40%;
+    }
+    h2 {
+        font-size: 80px;
+    }
+    .header {
+        font-size: 60px;
+    }
+    .subheader {
+        font-size: 30px;
+    }
+    .about-wrapper {
+        background-image: url("resources/flowers_cornersHorizontal.jpg");
+    }
+    .about-info {
+        transform: translateX(50px) translateY(20px);
+        width: 400px;
+    }
+    .section-size {
+        margin-bottom: 15%;
+    }
+    h3 {
+        font-size: 40px;
+    }
+    p {
+        font-size: 15px;
+    }
+    .carousel-wrapper {
+        height: 600px;
+    }
+    .carousel-category {
+        height: 80%;
+        align-self: center;
+    }
+    .gallery-text {
+        font-size: 50px;
+        transform: translateY(40px);
+    }
+    .gallery-arrow {
+        width: 100px;
+        height: 100px;
+        background-image: url("resources/forward-fill.svg");
+        transform: translateY(32.5%) translateX(50%);
+    }
+}
+
+@media (min-width: 768px) {
+    .navbar-brand {
+        position: absolute;
+        left: 50%;
+        margin-left: -110px !important;
+        display: block;
+    }
+    #navLinks {
+        display: flex;
+        justify-content: center;
+    }
+    .navbar-brand {
+        font-weight: bold;
+        font-size: 2rem;
+    }
+    .navbar-nav {
+        min-width: 600px;
+        width: 80%;
+        max-width: 700px;
+        display: flex;
+    }
+    .nav-item {
+        width: 15%;
+    }
+    .nav-item>a {
+        text-align: center;
+    }
+    .spacer {
+        width: 40%;
+    }
+    .header {
+        font-size: 80px;
+    }
+    .subheader {
+        font-size: 40px;
+    }
+    .about-info {
+        transform: translateX(90px) translateY(50px);
+        width: 500px;
+        font-size: 30px;
+    }
+    .section-size {
+        margin-bottom: 10%;
+    }
+    h3 {
+        font-size: 50px;
+    }
+    p {
+        font-size: 20px;
+        margin: 0;
+        margin-left: auto;
+    }
+    .section-size:nth-child(odd) h3 {
+        text-align: end;
+    }
+    .section-size:nth-child(odd) p {
+        text-align: end;
+        margin-left: auto;
+    }
+}
+
+@media (min-width: 992px) {
+    .carousel-wrapper {
+        margin: 0 5%;
     }
 }
