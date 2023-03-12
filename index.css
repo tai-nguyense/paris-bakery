@@ -3,6 +3,7 @@ font-family: 'Inconsolata', monospace;
 font-family: 'Roboto', sans-serif;
 font-family: 'Yeseva One', cursive; */
 
+html,
 body {
     -ms-overflow-style: none;
     scrollbar-width: none;
