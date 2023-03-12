@@ -11,14 +11,14 @@ const btnContact = document.querySelector("#btnContact");
 const mailIcon = document.querySelector("#mailIcon");
 
 navbarBtn.addEventListener("click", function() {
-    navbar.classList.toggle("navbar-closed");
-    navbar.classList.toggle("navbar-open");
+    navbarIcon.classList.toggle("navbar-closed");
+    navbarIcon.classList.toggle("navbar-open");
     if (window.scrollY === 0) {
         navbar.classList.toggle("scrolled");
         navbar.classList.toggle("bg-transparent");
     }
 })
-landingWrapper.parentElement.style.height = "calc(100vh)";
+landingWrapper.parentElement.style.height = "${window.innerHeight}px";
 landingWrapper.parentElement.style.padding = "0";
 pulldownBtn.addEventListener("click", function() {
     const pulldown = document.querySelectorAll(".section-size")[1].getBoundingClientRect().top;
@@ -81,7 +81,7 @@ carouselAll.forEach(function(carousel) {
         slideChange(carousel);
         setTimeout(function() {
             slideChange(carousel);
-        }, 610);
+        }, 620);
     })
 })
 

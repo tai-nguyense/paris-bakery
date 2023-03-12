@@ -41,17 +41,19 @@ a {
 }
 
 .bg-transparent .navbar-brand:hover {
-    filter: invert(30%) sepia(90%) saturate(4529%) hue-rotate(200deg) brightness(100%) contrast(104%);
-}
-
-.bg-transparent .navbar-icon:hover {
-    filter: invert(30%) sepia(90%) saturate(4529%) hue-rotate(200deg) brightness(100%) contrast(104%);
+    color: #5b3590;
 }
 
 .bg-transparent .top-bar,
 .bg-transparent .mid-bar,
 .bg-transparent .bot-bar {
     background-color: rgb(255, 255, 255);
+}
+
+.bg-transparent .navbar-toggler:hover .top-bar,
+.bg-transparent .navbar-toggler:hover .mid-bar,
+.bg-transparent .navbar-toggler:hover .bot-bar {
+    background-color: #5b3590;
 }
 
 .navbar {
@@ -63,13 +65,14 @@ a {
 
 .navbar-brand {
     color: white;
+    font-family: 'Yeseva One', cursive;
     font-weight: bold;
     padding-left: 3%;
     transition: color 200ms ease;
 }
 
 .navbar-brand:hover {
-    filter: invert(92%) sepia(93%) saturate(6758%) hue-rotate(170deg) brightness(91%) contrast(86%);
+    color: rgb(73, 142, 203);
 }
 
 .nav-link {
@@ -81,8 +84,7 @@ a {
 }
 
 .nav-link:hover {
-    color: rgb(106, 78, 144);
-    filter: invert(92%) sepia(93%) saturate(6758%) hue-rotate(170deg) brightness(91%) contrast(86%);
+    color: rgb(73, 142, 203);
 }
 
 footer .nav-link {
@@ -109,10 +111,6 @@ footer .nav-link {
     animation-timing-function: ease-in-out;
 }
 
-.navbar-icon:hover {
-    filter: invert(92%) sepia(93%) saturate(6758%) hue-rotate(170deg) brightness(91%) contrast(86%);
-}
-
 .top-bar,
 .mid-bar,
 .bot-bar {
@@ -123,7 +121,14 @@ footer .nav-link {
     transition: background-color 200ms ease;
 }
 
+.navbar-icon:hover>.top-bar,
+.navbar-icon:hover>.mid-bar,
+.navbar-icon:hover>.bot-bar {
+    background-color: rgb(73, 142, 203);
+}
+
 .navbar-open>.top-bar {
+    background-color: rgb(200, 48, 101);
     animation-fill-mode: forwards;
     animation-name: top-bar-rotate;
     animation-duration: .2s;
@@ -157,6 +162,7 @@ footer .nav-link {
 }
 
 .navbar-open>.bot-bar {
+    background-color: rgb(200, 48, 101);
     animation-fill-mode: forwards;
     animation-name: bot-bar-rotate;
     animation-duration: .2s;
@@ -260,7 +266,7 @@ video {
     height: 50px;
     width: 50px;
     background-image: url("resources/chevron-compact-down.svg");
-    transform: translateY(300px);
+    transform: translateY(250px);
     filter: brightness(0) invert(1);
     background-size: cover;
     background-repeat: no-repeat;
@@ -502,7 +508,7 @@ p {
     width: 300px;
     height: 100px;
     margin: 50px auto;
-    font-size: 37px;
+    font-size: 30px;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -542,7 +548,7 @@ p {
 }
 
 #btnContact>img {
-    width: 50px;
+    width: 47px;
     padding-left: 10px;
     font-size: xx-large;
     display: flex;
@@ -587,14 +593,14 @@ footer img:hover {
     }
     100% {
         transform: translateX(-3px) translateY(-3px);
-        filter: invert(92%) sepia(93%) saturate(6758%) hue-rotate(170deg) brightness(91%) contrast(86%);
+        filter: invert(92%) sepia(103%) saturate(108%) hue-rotate(170deg) brightness(101%) contrast(86%);
     }
 }
 
 @keyframes logo-unhover {
     0% {
         transform: translateX(-3px) translateY(-3px);
-        filter: invert(92%) sepia(93%) saturate(6758%) hue-rotate(170deg) brightness(91%) contrast(86%);
+        filter: invert(92%) sepia(103%) saturate(108%) hue-rotate(170deg) brightness(101%) contrast(86%);
         box-shadow: 6px 6px 2px 1px rgba(0, 0, 255, .2);
     }
     100% {
@@ -639,7 +645,6 @@ footer img:hover {
     margin: 8px;
     display: inline-block;
     filter: brightness(0) invert(1);
-    /* filter: invert(32%) sepia(43%) saturate(678%) hue-rotate(223deg) brightness(91%) contrast(86%); */
     background-image: url("resources/instagram.svg");
     background-size: cover;
     background-repeat: no-repeat;
@@ -689,7 +694,6 @@ footer img:hover {
     margin: 8px;
     display: inline-block;
     filter: brightness(0) invert(1);
-    /* filter: invert(32%) sepia(43%) saturate(678%) hue-rotate(223deg) brightness(91%) contrast(86%); */
     background-image: url("resources/facebook.svg");
     background-size: cover;
     background-repeat: no-repeat;
@@ -805,13 +809,13 @@ footer img:hover {
         color: white;
     }
     .bg-transparent .nav-link:hover {
-        filter: invert(30%) sepia(90%) saturate(4529%) hue-rotate(200deg) brightness(100%) contrast(104%);
+        color: rgb(73, 142, 203);
     }
     .bg-transparent .nav-link.active:hover {
         filter: none
     }
     .spacer {
-        width: 40%;
+        width: 50%;
     }
     h2 {
         font-size: 90px;
@@ -833,7 +837,7 @@ footer img:hover {
     #pulldown {
         height: 70px;
         width: 70px;
-        transform: translateY(275px);
+        transform: translateY(225px);
     }
     .section-size {
         margin-bottom: 15%;
@@ -863,6 +867,17 @@ footer img:hover {
         height: 100px;
         background-image: url("resources/forward-fill.svg");
         transform: translateY(32.5%) translateX(50%);
+    }
+    #btnContact>img {
+        width: 50px;
+        padding-left: 10px;
+        font-size: xx-large;
+    }
+    #btnContact {
+        width: 350px;
+        height: 100px;
+        margin: 50px auto;
+        font-size: 37px;
     }
     .social-media {
         margin-bottom: 20px;
@@ -923,7 +938,7 @@ footer img:hover {
     #pulldown {
         height: 80px;
         width: 80px;
-        transform: translateY(250px);
+        transform: translateY(200px);
     }
     .section-size {
         margin-bottom: 10%;
@@ -973,6 +988,9 @@ footer img:hover {
         width: 500px;
         font-size: 45px;
     }
+    h2 {
+        font-size: 120px;
+    }
     h3 {
         font-size: 40px;
     }
@@ -981,11 +999,6 @@ footer img:hover {
     }
     .content-size {
         width: 80%;
-    }
-    #pulldown {
-        height: 90px;
-        width: 90px;
-        transform: translateY(250px);
     }
 }
 
