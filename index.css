@@ -57,9 +57,12 @@ a {
 }
 
 .navbar {
+    width: 100%;
     --bs-navbar-brand-color: #5b3590;
     --bs-navbar-brand-hover-color: #5b3590;
     --bs-navbar-active-color: rgb(200, 48, 101);
+    --bs-navbar-padding-x: 0;
+    --bs-navbar-toggler-padding-x: 1rem;
     transition: background-color 300ms ease;
 }
 
@@ -67,7 +70,7 @@ a {
     color: white;
     font-family: 'Yeseva One', cursive;
     font-weight: bold;
-    padding-left: 3%;
+    padding-left: 5%;
     transition: color 200ms ease;
 }
 
@@ -77,7 +80,7 @@ a {
 
 .nav-link {
     font-weight: bold;
-    padding-left: 3%;
+    padding-left: 5%;
     transition: color 200ms ease;
     color: rgba(106, 78, 144, 0.858);
     --bs-nav-link-hover-color: rgba(106, 78, 144, 1);
@@ -201,7 +204,7 @@ footer .nav-link {
 .navbar-closed>.mid-bar {
     animation-fill-mode: forwards;
     animation-name: mid-bar-fade-in;
-    animation-duration: .1s;
+    animation-duration: .2s;
 }
 
 @keyframes mid-bar-fade-in {
@@ -233,6 +236,10 @@ footer .nav-link {
 
 .navbar-open .navbar-brand {
     color: #5b3590;
+}
+
+.landing-size {
+    height: calc(110vh - 56px);
 }
 
 .landing-wrapper {
@@ -273,28 +280,24 @@ video {
 }
 
 .section-size {
-    min-height: 784px;
-    height: calc(110vh - 56px);
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    margin-bottom: 10%;
+    height: 800px;
+    padding: auto;
     color: rgb(106, 78, 144);
-}
-
-.section-size h2 {
-    color: rgba(106, 78, 144, 0.841);
+    padding: auto;
 }
 
 .section-name {
-    display: flex;
-    justify-content: center;
+    margin-top: auto;
+    height: 100px;
+    text-align: center;
+    overflow-x: hidden;
 }
 
 h2 {
-    font-size: 70px;
+    color: rgba(106, 78, 144, 0.841);
+    font-size: 60px;
     font-weight: 600;
-    padding-bottom: 5%;
+    margin-top: auto;
 }
 
 .desc {
@@ -397,9 +400,13 @@ p {
     margin-left: 5px;
 }
 
+.about-size {
+    height: 100vh;
+}
+
 .about-wrapper {
     height: 80%;
-    margin: 0px 10%;
+    margin: auto 10%;
     background-image: url("resources/flowers_cornersVertical.jpg");
     background-size: cover;
     background-repeat: no-repeat;
@@ -569,12 +576,15 @@ footer>.container-fluid {
     align-items: center;
 }
 
-footer img {
-    position: absolute;
-    left: 40px;
-    filter: brightness(0) invert(1);
+#logo {
+    position: relative;
+    transform: translateX(30px);
     height: 200px;
     width: 200px;
+    filter: brightness(0) invert(1);
+}
+
+#logo img {
     object-fit: cover;
 }
 
@@ -588,29 +598,30 @@ footer img:hover {
 
 @keyframes logo-hover {
     0% {
-        transform: translateX(0px) translateY(0px);
+        transform: translateX(30px);
         box-shadow: none;
     }
     100% {
-        transform: translateX(-3px) translateY(-3px);
+        transform: translateX(27px) translateY(-3px);
         filter: invert(92%) sepia(103%) saturate(108%) hue-rotate(170deg) brightness(101%) contrast(86%);
     }
 }
 
 @keyframes logo-unhover {
     0% {
-        transform: translateX(-3px) translateY(-3px);
+        transform: translateX(27px) translateY(-3px);
         filter: invert(92%) sepia(103%) saturate(108%) hue-rotate(170deg) brightness(101%) contrast(86%);
         box-shadow: 6px 6px 2px 1px rgba(0, 0, 255, .2);
     }
     100% {
-        transform: translateX(0px) translateY(0px);
+        transform: translateX(30px);
         box-shadow: none;
     }
 }
 
 .footer-nav {
     align-self: end;
+    padding-right: 60px;
 }
 
 .quick-nav {
@@ -623,11 +634,10 @@ footer img:hover {
     display: flex;
     justify-content: end;
     align-items: end;
-    margin-right: 6%;
 }
 
 .quick-nav .nav-item>a {
-    font-size: 20px;
+    font-size: 18px;
     text-align: end;
 }
 
@@ -636,13 +646,11 @@ footer img:hover {
     display: flex;
     justify-content: end;
     align-items: center;
-    padding-right: 5%;
 }
 
 .logo-instagram {
     width: 35px;
     height: 35px;
-    margin: 8px;
     display: inline-block;
     filter: brightness(0) invert(1);
     background-image: url("resources/instagram.svg");
@@ -691,7 +699,7 @@ footer img:hover {
     cursor: pointer;
     width: 35px;
     height: 35px;
-    margin: 8px;
+    margin-left: 8px;
     display: inline-block;
     filter: brightness(0) invert(1);
     background-image: url("resources/facebook.svg");
@@ -840,7 +848,17 @@ footer img:hover {
         transform: translateY(225px);
     }
     .section-size {
+        display: flex;
+        justify-content: center;
+        align-items: center;
         margin-bottom: 15%;
+    }
+    .section-name {
+        margin-top: none;
+        height: 230px;
+    }
+    h2 {
+        font-size: 90px;
     }
     h3 {
         font-size: 35px;
@@ -879,18 +897,16 @@ footer img:hover {
         margin: 50px auto;
         font-size: 37px;
     }
-    .social-media {
-        margin-bottom: 20px;
+    .quick-nav .nav-item>a {
+        font-size: 20px;
     }
     .logo-instagram {
         width: 40px;
         height: 40px;
-        margin: 9px;
     }
     .logo-facebook {
         width: 40px;
         height: 40px;
-        margin: 9px;
     }
 }
 
@@ -966,19 +982,6 @@ footer img:hover {
         text-align: end;
         margin-left: auto;
         margin-right: 0;
-    }
-    .social-media {
-        margin-bottom: 20px;
-    }
-    .logo-instagram {
-        width: 50px;
-        height: 50px;
-        margin: 10px;
-    }
-    .logo-facebook {
-        width: 50px;
-        height: 50px;
-        margin: 10px;
     }
 }
 

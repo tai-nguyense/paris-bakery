@@ -18,10 +18,8 @@ navbarBtn.addEventListener("click", function() {
         navbar.classList.toggle("bg-transparent");
     }
 })
-landingWrapper.parentElement.style.height = "${window.innerHeight}px";
-landingWrapper.parentElement.style.padding = "0";
 pulldownBtn.addEventListener("click", function() {
-    const pulldown = document.querySelectorAll(".section-size")[1].getBoundingClientRect().top;
+    const pulldown = document.querySelector(".about-size").getBoundingClientRect().top;
     window.scrollTo({ top: pulldown - 15, behavior: "smooth" })
 })
 gallery.addEventListener("mouseover", function() {
@@ -54,8 +52,24 @@ document.addEventListener("scroll", function() {
         navbar.classList.add("scrolled");
     }
 })
-
-
+window.addEventListener("scroll", function() {
+    var appearAll = document.querySelectorAll(".scroll-appear");
+    for (var i = 0; i < appearAll.length; i++) {
+        var appearHeight = window.innerHeight - 200;
+        var elementHeight = appearAll[i].getBoundingClientRect().top;
+        if (elementHeight < appearHeight) {
+            appearAll[i].classList.add("active");
+        }
+    }
+    var appearAll2 = document.querySelectorAll(".scroll-appear-2");
+    for (var i = 0; i < appearAll.length; i++) {
+        var appearHeight = window.innerHeight - 200;
+        var elementHeight = appearAll2[i].getBoundingClientRect().top;
+        if (elementHeight < appearHeight) {
+            appearAll2[i].classList.add("active");
+        }
+    }
+})
 
 $(".carousel-image").each(function() {
     $(this).attr("draggable", false);
@@ -83,25 +97,6 @@ carouselAll.forEach(function(carousel) {
             slideChange(carousel);
         }, 620);
     })
-})
-
-window.addEventListener("scroll", function() {
-    var appearAll = document.querySelectorAll(".scroll-appear");
-    for (var i = 0; i < appearAll.length; i++) {
-        var appearHeight = window.innerHeight - 200;
-        var elementHeight = appearAll[i].getBoundingClientRect().top;
-        if (elementHeight < appearHeight) {
-            appearAll[i].classList.add("active");
-        }
-    }
-    var appearAll2 = document.querySelectorAll(".scroll-appear-2");
-    for (var i = 0; i < appearAll.length; i++) {
-        var appearHeight = window.innerHeight - 200;
-        var elementHeight = appearAll2[i].getBoundingClientRect().top;
-        if (elementHeight < appearHeight) {
-            appearAll2[i].classList.add("active");
-        }
-    }
 })
 
 function slideChange(carousel) {
