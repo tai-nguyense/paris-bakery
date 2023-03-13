@@ -408,6 +408,7 @@ p {
     height: 80%;
     margin: auto 10%;
     background-image: url("resources/flowers_cornersVertical.jpg");
+    background-attachment: fixed;
     background-size: cover;
     background-repeat: no-repeat;
     background-position-x: center;
